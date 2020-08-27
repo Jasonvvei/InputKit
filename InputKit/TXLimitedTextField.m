@@ -67,6 +67,14 @@
     _historyText = nil;
 }
 
+
+- (void)updateText:(NSString *)text needUpdateHistory:(BOOL)needUpdateHistory {
+    self.text = text;
+    if (needUpdateHistory) {
+        self.historyText = text;
+    }
+}
+
 #pragma mark - Setter + Getter Methods
 
 - (void)setLimitedNumber:(NSInteger)limitedNumber {
